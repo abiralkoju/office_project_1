@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;900&display=swap");
+:root {
+  --blue: #1e83f7;
+  --orange: #f7921e;
+  --green: #20bc08;
+  --grey: #c3c1bf;
+  --black: #24252a;
+  --white: #ffffff;
+  --primary-grey: #00000066;
+  --secondary-white: #f9f9f9;
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Nunito Sans", sans-serif;
+  --list-color: #656669;
+}

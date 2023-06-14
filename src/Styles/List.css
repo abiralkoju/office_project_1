@@ -1,0 +1,147 @@
+.list {
+  box-shadow: 0px -25px 15px #1201030f;
+  margin: 8px auto;
+  width: 98%;
+  border-radius: 5px;
+}
+
+.listTop {
+  height: 40px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 5px;
+}
+
+.topButton {
+  border: none;
+  margin: 4px 10px 3px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.topButton:active {
+  border-bottom: 3px solid var(--orange);
+}
+
+.btn-primary {
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 4px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+#search-item {
+  border: none;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-top: 2px;
+}
+.listBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.filter {
+  display: flex;
+  gap: 18px;
+}
+
+.filterBtn {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #1e83f7;
+  color: #1e83f7;
+  width: 3.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  padding-top: 2px;
+}
+
+.add_team_btn {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  width: 6rem;
+  justify-content: center;
+  cursor: pointer;
+}
+.add_team_btn:hover {
+  background-color: #f5a211;
+}
+
+table {
+  width: 100%;
+  margin-top: 6px;
+  color: var(--list-color);
+  font-family: var(--secondary-font);
+  border-collapse: collapse;
+}
+
+th {
+  padding-bottom: 4px;
+  font-weight: 700;
+}
+
+table,
+th,
+td {
+  text-align: start;
+  font-size: 0.85rem;
+  padding: 4px 0px 4px 25px;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+
+td {
+  font-weight: 600;
+}
+
+.qr-code {
+  text-align: center;
+  transform: translate(-20%);
+}
+.qr-code img {
+  height: 1.3rem;
+}
+
+.action {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.action img {
+  height: 1.2rem;
+  width: 1.15rem;
+  padding-top: 3px;
+}
+
+.action .action_edit {
+  border: 1px solid #1e83f733;
+  background-color: #1e83f71a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action .action_bin {
+  border: 1px solid #f71e1e1a;
+  background-color: #f71e1e1a;
+  border-radius: 5px;
+  cursor: pointer;
+}

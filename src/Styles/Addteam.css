@@ -1,0 +1,11 @@
+.left-arrow {
+  position: absolute;
+  top: 10px;
+  margin-left: 10px;
+  border: 2px solid #c3c1bf;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  height: 36px;
+}
