@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import left from "../Assests/Images/left-arrow.png";
 import smallright from "../Assests/Images/sm-right-arrow.png";
@@ -7,31 +7,50 @@ import qr_img from "../Assests/Images/qr-code2.png";
 import printer from "../Assests/Images/printer.png";
 import download from "../Assests/Images/download.png";
 
-const Addteam = () => {
+import ChipsEditEmp from "./ChipsEditEmp";
+
+const EditTeam = () => {
+  const navigate = useNavigate();
+  const [item, setItem] = useState([]);
+
+  const changed = (e) => {
+    setItem([...item, e.target.value]);
+  };
+
+  const deleteItem = (clickedItem) => {
+    setItem((oldItem) => {
+      const newValues = oldItem.filter((el, index) => el !== clickedItem.id);
+      return newValues;
+    });
+  };
+
   return (
     <>
       {/* left-arrow button top */}
-      <Link to="/">
-        <button className="left-arrow">
-          <img src={left} alt="left-ar" />
-        </button>
-      </Link>
+      <button
+        className="left-arrow"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        <img src={left} alt="left-ar" />
+      </button>
       {/* end */}
 
       {/* starting main-content container */}
       <div className="container">
         {/* page-map-location */}
-        <div className="addMember-top">
+        <div className="eidtMember-top addMember-top">
           <div className="sm-mapping">
             <span>Manage Users</span>
             <img src={smallright} alt="right-ar" />
             <span>Teams </span>
             <img src={smallright} alt="right-ar" />
-            <span>Add Team</span>
+            <span>Edit Team</span>
           </div>
 
           <div className="main-title">
-            <h4>Add Team</h4>
+            <h4>Edit Team</h4>
           </div>
         </div>
         {/* page-map location end */}
@@ -46,11 +65,11 @@ const Addteam = () => {
                 <div className="personal-info-container">
                   <div className="team-name">
                     <label htmlFor="teamName">Team Name</label>
-                    <input type="text" placeholder="Enter Team Name" />
+                    <input type="text" placeholder="Team Fabrication" />
                   </div>
                   <div className="team-password">
                     <label htmlFor="teamPassword">Team Password</label>
-                    <input type="password" placeholder="Team Password" />
+                    <input type="password" placeholder="33755Adb" />
                   </div>
                 </div>
               </div>
@@ -67,16 +86,36 @@ const Addteam = () => {
                   <label htmlFor="teamMembers">Team Members</label>
                 </div>
                 <div className="selectMenu">
-                  <select id="select">
-                    <option value="Select Employees" disabled selected>
+                  <select id="select" onChange={changed}>
+                    <option value="" disabled selected>
                       Select Employees
                     </option>
-                    <option value="John">John Doe - Electrical</option>
-                    <option value="Marcus">Marcus Brownlee - Painting</option>
-                    <option value="Jane">Jane Jackson - Blasting</option>
-                    <option value="Thomas">Thomas Humfrey - Electrical</option>
+                    <option value="John Doe">John Doe - Electrical</option>
+                    <option value="Marcus Brownlee">
+                      Marcus Brownlee - Painting
+                    </option>
+                    <option value="Jane Jackson">
+                      Jane Jackson - Blasting
+                    </option>
+                    <option value="Thomas Humfrey">
+                      Thomas Humfrey - Electrical
+                    </option>
                   </select>
+
+                  <ul className="unordered-list">
+                    {item.map((el, index) => {
+                      return (
+                        <ChipsEditEmp
+                          text={el}
+                          onSelect={deleteItem}
+                          id={el}
+                          key={index}
+                        />
+                      );
+                    })}
+                  </ul>
                 </div>
+
                 {/* select employee ends here */}
 
                 <div className="billable_hours">
@@ -136,4 +175,4 @@ const Addteam = () => {
   );
 };
 
-export default Addteam;
+export default EditTeam;

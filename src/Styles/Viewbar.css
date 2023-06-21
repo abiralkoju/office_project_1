@@ -1,0 +1,111 @@
+.employee_info_wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: var(--white);
+  box-shadow: 0px -5px 15px #1201030f;
+  height: 100%;
+  width: 25%;
+  padding: 1rem;
+}
+
+.top-info-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--grey);
+}
+
+.left_profile_employee_info h3 {
+  color: var(--black);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.img_info_profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.img_info_profile img {
+  width: 55%;
+  height: 10%;
+  position: relative;
+}
+.img_info_profile .green-pencil {
+  background: var(--green);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  width: 7.3%;
+  position: absolute;
+  left: 7.2rem;
+  top: 10rem;
+}
+.img_info_profile h4 {
+  font-size: 1.2rem;
+  color: var(--black);
+  font-weight: 800;
+  margin-top: 1rem;
+}
+.img_info_profile h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: -4px;
+}
+
+.employee_blue_btn {
+  margin-top: 0.4rem;
+}
+
+.emp_blue_btn {
+  background-color: var(--blue);
+  color: var(--white);
+  outline: none;
+  border: none;
+  padding: 0.45rem;
+  border-radius: 18px;
+  width: 5.5rem;
+  font-weight: 600;
+}
+
+/* middle container */
+.middle-info-container {
+  margin-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 15px;
+  text-align: left;
+  border-bottom: 2px solid var(--grey);
+}
+
+.bottom-info-container {
+  margin-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 52px;
+  row-gap: 15px;
+  text-align: left;
+}
+
+/* button */
+.bottom-btn-container button {
+  width: 100%;
+  background-color: var(--orange);
+  color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bottom-btn-container button img {
+  margin-top: -3px;
+}

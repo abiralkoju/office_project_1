@@ -1,0 +1,38 @@
+.main-filter-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+
+.filter-content-container {
+  position: fixed;
+  padding: 0.8rem;
+  background-color: var(--white);
+  box-shadow: 0px -5px 15px #1201030f;
+  width: 20%;
+}
+
+.filter-content-container h5 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: Nunito Sans;
+  margin-bottom: 4px;
+}
+.filter-content-container h6 {
+  font-size: 0.8rem;
+  font-family: Nunito Sans;
+}
+
+input[type="range"] {
+  --webkit-appearance: none;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--white);
+  outline: none;
+  --webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 0.2rem;
+}

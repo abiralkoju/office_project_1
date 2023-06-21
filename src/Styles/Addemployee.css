@@ -1,0 +1,109 @@
+.add_employee_form {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.left-part {
+  width: 20%;
+}
+.right-part {
+  width: 95%;
+}
+
+.profile_image_container {
+  display: grid;
+  grid-template-columns: 100% 90% auto;
+}
+.profile_img img {
+  width: 125px;
+}
+input[type="file"] {
+  display: none;
+}
+.upload_profile_btn {
+  background-color: var(--green);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.upload_profile_btn label {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.information-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin-top: 1.8rem;
+}
+.right-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-bottom: 1.8rem;
+  border-bottom: 2px solid var(--grey);
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Billable information css */
+.right_container_top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.right_container_top img {
+  height: 18px;
+}
+
+/* form select*/
+form select {
+  padding: 0 2px;
+}
+
+/* billable information */
+.billable_hours_btm_cont {
+  margin-top: 1rem;
+}
+
+.flex_input_enter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+.input_and_btn input {
+  width: 70%;
+  border-radius: 5px 0 0 5px;
+}
+.input_and_btn button {
+  width: 30%;
+  height: 1.55rem;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: var(--grey);
+}
+
+.enter_btn {
+  width: 100%;
+}
+.enter_btn button {
+  width: 30%;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  height: 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+}
+.enter_btn button:hover {
+  background-color: #348ef5;
+}

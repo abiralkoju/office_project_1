@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch, AiFillFilter, AiOutlinePlus } from "react-icons/ai";
 import img from "../Assests/Images/Bin1.png";
 import edit from "../Assests/Images/Edit1.png";
 import qr from "../Assests/Images/QR code.jpg";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import DeleteTeam from "./DeleteTeam";
+import Filterlist from "./Filterlist";
 
-const List = () => {
+const Teams = () => {
+  const navigate = useNavigate();
+
+  const [showModal, setShowModal] = useState(false); //to show delete container
+
+  const [showFilter, setShowFilter] = useState(false); //to show filter container
+
+  const closeModal = () => setShowModal(false);
+
+  const closeFilter = () => setShowFilter(false);
+
   return (
-    <div className="list">
-      <div className="listTop">
-        <button className="topButton">Teams</button>
-        <button className="topButton">Employees</button>
+    <div className="table">
+      <div className="tableTop">
+        <button className="topButton" id="teams_topButton">
+          Teams
+        </button>
+        <button
+          className="topButton"
+          onClick={() => navigate("/employees")}
+          id="topButton_emp"
+        >
+          Employees
+        </button>
       </div>
-      <hr className="hrtag" />
 
-      <div className="listBottom">
+      <div className="tableBottom">
         <div className="filter">
           <div>
             <button className="search btn-primary">
@@ -24,19 +43,30 @@ const List = () => {
             </button>
           </div>
           <div>
-            <button type="submit" className="filterBtn">
+            <button
+              type="submit"
+              className="filterBtn "
+              onClick={() => {
+                setShowFilter(true);
+              }}
+            >
               <AiFillFilter />
               Filter
             </button>
+            {showFilter && <Filterlist displayFilter={closeFilter} />}
           </div>
         </div>
         <div>
-          <Link to="/addteam" style={{ textDecoration: "none" }}>
-            <button className="add_team_btn btn-primary">
-              <AiOutlinePlus />
-              Add team
-            </button>
-          </Link>
+          <button
+            className="add_team_btn btn-primary-add "
+            style={{ textDecoration: "none" }}
+            onClick={() => {
+              navigate("/addteam");
+            }}
+          >
+            <AiOutlinePlus />
+            Add team
+          </button>
         </div>
       </div>
 
@@ -63,12 +93,16 @@ const List = () => {
             <td>27,000</td>
             <td>
               <div className="action">
-                <div className="action_edit">
+                <div
+                  onClick={() => navigate("/editTeam")}
+                  className="action_edit"
+                >
                   <img src={edit} alt="edit" />
                 </div>
-                <div className="action_bin">
+                <div className="action_bin" onClick={() => setShowModal(true)}>
                   <img src={img} alt="bin" />
                 </div>
+                {showModal && <DeleteTeam closeModal={closeModal} />}
               </div>
             </td>
           </tr>
@@ -81,12 +115,16 @@ const List = () => {
             </td>
             <td>27,000</td>
             <td className="action">
-              <div className="action_edit">
+              <div
+                onClick={() => navigate("/editTeam")}
+                className="action_edit"
+              >
                 <img src={edit} alt="edit" />
               </div>
-              <div className="action_bin">
+              <div className="action_bin" onClick={() => setShowModal(true)}>
                 <img src={img} alt="bin" />
               </div>
+              {showModal && <DeleteTeam closeModal={closeModal} />}
             </td>
           </tr>
 
@@ -98,12 +136,16 @@ const List = () => {
             </td>
             <td>27,000</td>
             <td className="action">
-              <div className="action_edit">
+              <div
+                onClick={() => navigate("/editTeam")}
+                className="action_edit"
+              >
                 <img src={edit} alt="edit" />
               </div>
-              <div className="action_bin">
+              <div className="action_bin" onClick={() => setShowModal(true)}>
                 <img src={img} alt="bin" />
               </div>
+              {showModal && <DeleteTeam closeModal={closeModal} />}
             </td>
           </tr>
 
@@ -115,12 +157,16 @@ const List = () => {
             </td>
             <td>27,000</td>
             <td className="action">
-              <div className="action_edit">
+              <div
+                onClick={() => navigate("/editTeam")}
+                className="action_edit"
+              >
                 <img src={edit} alt="edit" />
               </div>
-              <div className="action_bin">
+              <div className="action_bin" onClick={() => setShowModal(true)}>
                 <img src={img} alt="bin" />
               </div>
+              {showModal && <DeleteTeam closeModal={closeModal} />}
             </td>
           </tr>
 
@@ -132,12 +178,16 @@ const List = () => {
             </td>
             <td>27,000</td>
             <td className="action">
-              <div className="action_edit">
+              <div
+                onClick={() => navigate("/editTeam")}
+                className="action_edit"
+              >
                 <img src={edit} alt="edit" />
               </div>
-              <div className="action_bin">
+              <div className="action_bin" onClick={() => setShowModal(true)}>
                 <img src={img} alt="bin" />
               </div>
+              {showModal && <DeleteTeam closeModal={closeModal} />}
             </td>
           </tr>
 
@@ -149,12 +199,16 @@ const List = () => {
             </td>
             <td>27,000</td>
             <td className="action">
-              <div className="action_edit">
+              <div
+                onClick={() => navigate("/editTeam")}
+                className="action_edit"
+              >
                 <img src={edit} alt="edit" />
               </div>
-              <div className="action_bin">
+              <div className="action_bin" onClick={() => setShowModal(true)}>
                 <img src={img} alt="bin" />
               </div>
+              {showModal && <DeleteTeam closeModal={closeModal} />}
             </td>
           </tr>
         </tbody>
@@ -163,4 +217,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default Teams;

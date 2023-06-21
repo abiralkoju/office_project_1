@@ -9,3 +9,230 @@
   background-color: transparent;
   height: 36px;
 }
+
+.container {
+  min-height: 100%;
+  padding-top: 8px;
+  font-family: var(--secondary-font);
+  position: relative;
+  /* padding-bottom: 2rem; */
+}
+
+.addMember-top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+.addMember-top,
+form {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.sm-mapping {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--list-color);
+}
+
+.main-title {
+  margin-top: 4px;
+}
+.main-title h4 {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+form {
+  min-height: 75%;
+  padding: 20px 0 0 15px;
+  background-color: var(--white);
+  box-shadow: 6px -5px 15px 8px #1201030f;
+}
+form h4 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+form h5,
+label {
+  font-size: 0.8rem;
+  color: var(--black);
+  font-weight: 600;
+}
+form input,
+select {
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--grey);
+  height: 25px;
+  padding: 6px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  background-color: #f1f1f1;
+  color: #656669;
+}
+.form-data {
+  margin-right: 60px;
+}
+
+/* basic information css */
+.basic-info {
+  display: flex;
+  gap: 5rem;
+}
+.basic-info h4 {
+  width: 20%;
+  text-align: end;
+}
+.personal-info {
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--grey);
+  width: 80%;
+}
+.personal-info-container {
+  display: flex;
+  gap: 1.3rem;
+}
+.team-name {
+  display: flex;
+  flex-direction: column;
+}
+.team-password {
+  display: flex;
+  flex-direction: column;
+}
+.personal-info input {
+  width: 15rem;
+}
+
+/* members column css */
+.members {
+  padding: 18px 0;
+  display: flex;
+  gap: 5rem;
+}
+.members-title {
+  width: 20%;
+  text-align: end;
+}
+.right__team_member {
+  width: 80%;
+}
+
+.selectMenu {
+  width: 31.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  padding: 9px 0 7px 9px;
+  margin: 5px 0 18px;
+}
+#select {
+  cursor: pointer;
+}
+#select:nth-child(1) {
+  padding: 0 3px !important;
+  margin-top: 0px !important;
+}
+
+.billable_input_container {
+  display: flex;
+  width: 50%;
+}
+.billable_hours_input {
+  width: 70%;
+}
+.billable_hours_input input {
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+}
+.billable_input_container button {
+  width: 30%;
+  border-radius: 0 5px 5px 0;
+  height: 25px;
+  margin-top: 5px;
+  border: 1px solid var(--grey);
+  background-color: var(--blue);
+  color: var(--white);
+  border-left: none;
+  cursor: pointer;
+}
+.billable_hours {
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--grey);
+}
+
+/* qr section starts here */
+.team_qr_container {
+  margin-top: 18px;
+  display: flex;
+  gap: 5rem;
+}
+.left_side_qr_container {
+  width: 20%;
+  text-align: end;
+}
+.right_side_qr_container {
+  width: 80%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.team_qr_img img {
+  height: 80px;
+}
+
+.qr_team_btns {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.button_qr {
+  width: 7rem;
+  border: none;
+}
+.acc_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+.print_button {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+.download_button {
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+/* footer starts here */
+.save_footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: var(--white);
+  height: 10%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px -5px 15px #1201030f;
+}
+.save_footer button {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  width: 6rem;
+  cursor: pointer;
+  justify-content: center;
+  margin: 2rem;
+}
+.save_footer button:hover {
+  background-color: #f5a211;
+}

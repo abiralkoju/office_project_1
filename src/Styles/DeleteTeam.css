@@ -1,0 +1,63 @@
+.main-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #24252a80;
+  opacity: 0.6;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 1.7rem 1rem 1.7rem 2rem;
+  border-radius: 5px;
+  display: flex;
+  gap: 15px;
+}
+.content-wrapper h2 {
+  font-size: 1.8rem;
+}
+
+.content-wrapper-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.deleteButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 5px;
+}
+#deleteBtn {
+  width: 5rem;
+  height: 2.2rem;
+  border-radius: 5px;
+  background-color: red;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+#cancelBtn {
+  width: 5rem;
+  height: 2.2rem;
+  border-radius: 5px;
+  background-color: var(--blue);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+#cross-btn {
+  outline: none;
+  border: none;
+  height: 5%;
+  background: transparent;
+  cursor: pointer;
+}

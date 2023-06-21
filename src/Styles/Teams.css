@@ -1,34 +1,43 @@
-.list {
+.table {
   box-shadow: 0px -25px 15px #1201030f;
   margin: 8px auto;
   width: 98%;
   border-radius: 5px;
 }
 
-.listTop {
+.tableTop {
   height: 40px;
   display: flex;
   gap: 5px;
   align-items: center;
-  padding: 5px;
+  border-bottom: 2px solid var(--grey);
+}
+#teams_topButton {
+  border-bottom: 3.5px solid var(--orange);
+  color: var(--black);
+}
+#topButton_emp {
+  margin-bottom: 5px;
+  color: #656669;
 }
 
 .topButton {
+  border-bottom: 3.5px solid transparent;
   border: none;
-  margin: 4px 10px 3px;
+  margin: 4px 10px 1px;
   font-size: 1rem;
   font-weight: bold;
   background-color: transparent;
   cursor: pointer;
+  height: 100%;
 }
-
-.topButton:active {
-  border-bottom: 3px solid var(--orange);
+Link .topButton {
+  height: 100%;
 }
 
 .btn-primary {
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid var(--grey);
   padding: 4px;
   height: 30px;
   display: flex;
@@ -44,7 +53,7 @@
   outline: none;
   padding-top: 2px;
 }
-.listBottom {
+.tableBottom {
   display: flex;
   justify-content: space-between;
   padding: 14px;
@@ -73,9 +82,14 @@
   background-color: var(--orange);
   color: var(--white);
   border: none;
-  width: 6rem;
+  min-width: 6rem;
+  display: flex;
   justify-content: center;
+  height: 100%;
+  border-radius: 5px;
   cursor: pointer;
+  align-items: center;
+  gap: 3px;
 }
 .add_team_btn:hover {
   background-color: #f5a211;

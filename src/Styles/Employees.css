@@ -1,0 +1,20 @@
+.action .action_view {
+  border: 1px solid #20bc081a;
+  background-color: #20bc081a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+tr .actions-data {
+  padding-left: 0.8rem;
+}
+
+#emp_topButton {
+  border-bottom: 3.5px solid var(--orange);
+  color: var(--black);
+}
+
+#topButton_teams {
+  margin-bottom: 5px;
+  color: #656669;
+}

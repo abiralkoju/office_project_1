@@ -1,0 +1,25 @@
+.unordered-list {
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0.6rem 0.6rem 0 0;
+}
+
+.unordered-list li {
+  text-decoration: none;
+  list-style: none;
+  padding: 0.1rem 0.7rem;
+  background: var(--grey);
+  border-radius: 20px;
+  margin: 0 0.4rem 0.4rem;
+  color: #656669;
+  border: 1px solid #c3c1bf;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.unordered-list img {
+  cursor: pointer;
+  width: 0.7rem;
+}
